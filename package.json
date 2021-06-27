@@ -1,6 +1,6 @@
 {
-  "homepage": "http://onurseckin.github.io/react-template",
-  "name": "react-template",
+  "homepage": "https://onurseckin.github.io/trending-movies-react",
+  "name": "trending-movies-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
