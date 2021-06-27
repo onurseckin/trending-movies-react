@@ -7,7 +7,6 @@ export default function Movie({ id, title }) {
     return <div>Loading...</div>
   }
   const tvShow = TVShowData.response
-  console.log(tvShow)
   const Genre = () => {
     let genres = tvShow.genres
     let result = ''
@@ -41,13 +40,13 @@ export default function Movie({ id, title }) {
     )
   }
   return (
-    <tr className='movieRow'>
-      <td className='movieImage'>
+    <tr className='tableRow'>
+      <td className='tableImage'>
         <a href={tvShow.homepage} target='_blank' rel='noreferrer'>
           <img src={getImageUrl(tvShow.poster_path)} alt='tvShow-img' />
         </a>
       </td>
-      <td className='movieInfos'>
+      <td className='tableInfos'>
         <span style={{ fontSize: 12 }}>
           <span style={{ fontSize: 24 }}>{tvShow.vote_average}</span> / 10
         </span>

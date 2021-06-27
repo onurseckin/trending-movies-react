@@ -40,13 +40,13 @@ export default function Movie({ id }) {
     )
   }
   return (
-    <tr className='movieRow'>
-      <td className='movieImage'>
+    <tr className='tableRow'>
+      <td className='tableImage'>
         <a href={imdbUrl(movie.imdb_id)} target='_blank' rel='noreferrer'>
           <img src={getImageUrl(movie.poster_path)} alt='movie-img' />
         </a>
       </td>
-      <td className='movieInfos'>
+      <td className='tableInfos'>
         <span style={{ fontSize: 12 }}>
           <span style={{ fontSize: 24 }}>{movie.vote_average}</span> / 10
         </span>

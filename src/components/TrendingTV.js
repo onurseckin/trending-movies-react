@@ -8,10 +8,9 @@ export default function TrendingTV() {
     return <div>Loading...</div>
   }
   const tvShows = trendingTvShows.response.results
-  // console.log(tvShows)s
   const RenderTvShows = () => tvShows.map((tvShow) => <TVShow id={tvShow.id} key={tvShow.id} title={tvShow.name} />)
   return (
-    <div className='trendingtvShows'>
+    <div className='trendingMovies'>
       <table cellPadding='10' cellSpacing='0'>
         <thead>
           <tr>
