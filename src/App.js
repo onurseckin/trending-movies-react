@@ -6,9 +6,7 @@ function App() {
   return (
     <div className='app'>
       <div className='header'>
-        <h1 style={{ display: 'flex', justifyContent: 'center', color: 'darkcyan' }}>
-          Trending Movies and TV Shows - React Project
-        </h1>
+        <h1>Trending Movies and TV Shows - React Project</h1>
       </div>
       <div className='app-container'>
         <TredingMovies />

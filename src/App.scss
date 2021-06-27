@@ -1,11 +1,13 @@
 $mint: rgb(86.6%, 95.6%, 95.4%);
 $text: rgb(12, 29, 77);
+$tableHead: rgb(9, 92, 170);
 .header {
   display: flex;
   justify-content: center;
   margin: 0 auto;
   width: 100%;
   height: 70px;
+  color: $tableHead;
 }
 .app-container {
   width: 100%;
@@ -22,6 +24,7 @@ $text: rgb(12, 29, 77);
   min-width: 5%;
   border-left: 3px solid $mint;
   border-right: 3px solid $mint;
+  background-color: rgb(251, 252, 235);
 }
 
 .trendingMovies {
@@ -29,7 +32,6 @@ $text: rgb(12, 29, 77);
   flex-flow: column wrap;
   margin: auto;
   margin-top: 1%;
-  padding: 3%;
   height: 100%;
   min-height: 100%;
   min-width: 300px;
@@ -37,7 +39,7 @@ $text: rgb(12, 29, 77);
   border-top: 3px solid $mint;
   th {
     font-size: 32px;
-    color:rgb(15, 121, 219)
+    color:$tableHead;
   }
   @media only screen and (max-width: 768px) {
     border: 3px solid $mint;
@@ -48,10 +50,14 @@ $text: rgb(12, 29, 77);
 .tableRow {
   display: flex;
   flex-direction: column wrap;
+  border-bottom: 1px dotted $mint;
 }
 
 /* Small devices (portrait tablets and large phones, 768px and down) */
 @media only screen and (max-width: 768px) {
+  .trendingMovies {
+    padding: 3%;
+  }
   .divider {
     display: none;
   }
