@@ -1,5 +1,5 @@
 import React from 'react'
-import { useFetch, getImageUrl, getMovieByIdUrl } from '../services'
+import { useFetch, getImageUrl, getMovieByIdUrl, imdbUrl, youtubeTrailerUrl } from '../services'
 import { playingOnHelper } from '../helpers'
 export default function Movie({ id }) {
   const movieData = useFetch(getMovieByIdUrl(id))
@@ -19,28 +19,43 @@ export default function Movie({ id }) {
 
   const PlayingOn = () => {
     let url = movie.homepage
-    let result = ''
+    let anchorTag = (url) => (
+      <a href={url} target='_blank' rel='noreferrer'>
+        {playingOnHelper(url)}
+      </a>
+    )
     if (url) {
-      result = playingOnHelper(url)
-      return <p>Playing On: {result}</p>
+      return <p>Playing On: {anchorTag(url)}</p>
     } else {
-      return null
+      return <p></p>
     }
   }
 
-  console.log(movie)
+  const WatchTrailer = () => {
+    let url = youtubeTrailerUrl(movie.title)
+    return (
+      <a href={url} target='_blank' rel='noreferrer'>
+        Watch Trailer
+      </a>
+    )
+  }
   return (
     <tr className='movieRow'>
       <td className='movieImage'>
-        <img src={getImageUrl(movie.poster_path)} alt='movie-img' />
+        <a href={imdbUrl(movie.imdb_id)} target='_blank' rel='noreferrer'>
+          <img src={getImageUrl(movie.poster_path)} alt='movie-img' />
+        </a>
       </td>
       <td className='movieInfos'>
         <span style={{ fontSize: 12 }}>
           <span style={{ fontSize: 24 }}>{movie.vote_average}</span> / 10
         </span>
-        <p style={{ fontSize: 16 }}>{movie.title}</p>
+        <a style={{ textDecoration: 'none' }} href={imdbUrl(movie.imdb_id)} target='_blank' rel='noreferrer'>
+          <p style={{ fontSize: 16 }}>{movie.title}</p>
+        </a>
         <Genre />
         <PlayingOn />
+        <WatchTrailer />
       </td>
     </tr>
   )

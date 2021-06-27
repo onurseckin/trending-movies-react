@@ -1,5 +1,5 @@
 export const playingOnHelper = (url) => {
-  const regex = /^(?:https?:)?(?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n]+)/gim
+  const regex = /^(?:https?:)?(?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:/\n]+)/gim
   const r = new RegExp(regex)
   const raw = r.exec(url)
   const domain = raw[1]
@@ -30,6 +30,18 @@ export const playingOnHelper = (url) => {
       return 'Base FX'
     case 'sonypictures.com':
       return 'Sony Pictures'
+    case 'hbo.com':
+      return 'HBO'
+    case 'amazon.com':
+      return 'Amazon Prime Video'
+    case 'hulu.com':
+      return 'Hulu'
+    case 'roku.com':
+      return 'Roku'
+    case 'cbs.com':
+      return 'CBS'
+    case 'tv.apple.com':
+      return 'Apple TV'
     default:
       return domain
   }

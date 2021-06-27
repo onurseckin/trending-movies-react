@@ -1,23 +1,25 @@
 import React from 'react'
 import { useFetch, getTrendingTVUrl } from '../services'
+import TVShow from './TVShow'
+
 export default function TrendingTV() {
-  const trendingTVData = useFetch(getTrendingTVUrl())
-  if (!trendingTVData.response) {
+  const trendingTvShows = useFetch(getTrendingTVUrl())
+  if (!trendingTvShows.response) {
     return <div>Loading...</div>
   }
-  console.log(trendingTVData.response)
+  const tvShows = trendingTvShows.response.results
+  // console.log(tvShows)s
+  const RenderTvShows = () => tvShows.map((tvShow) => <TVShow id={tvShow.id} key={tvShow.id} title={tvShow.name} />)
   return (
-    <div className='trendingTV'>
-      <table>
+    <div className='trendingtvShows'>
+      <table cellPadding='10' cellSpacing='0'>
         <thead>
           <tr>
             <th>Trending TV Shows</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Trending TV Shows Data</td>
-          </tr>
+          <RenderTvShows />
         </tbody>
       </table>
     </div>

@@ -30,3 +30,7 @@ export const getTVByIdUrl = (id) => `https://api.themoviedb.org/3/tv/${id}?api_k
 export const getMovieByIdUrl = (id) => `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`
 
 export const getImageUrl = (id) => `https://image.tmdb.org/t/p/w154/${id}`
+
+export const imdbUrl = (id) => `https://www.imdb.com/title/${id}`
+
+export const youtubeTrailerUrl = (id) => `https://www.youtube.com/results?search_query=${id}+trailer`
