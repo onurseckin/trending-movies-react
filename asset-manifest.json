@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/trending-movies-react/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/trending-movies-react/static/js/main.993544c1.chunk.js",
+    "main.js.map": "/trending-movies-react/static/js/main.993544c1.chunk.js.map",
+    "runtime-main.js": "/trending-movies-react/static/js/runtime-main.63d40e2e.js",
+    "runtime-main.js.map": "/trending-movies-react/static/js/runtime-main.63d40e2e.js.map",
+    "static/js/2.784fd5fd.chunk.js": "/trending-movies-react/static/js/2.784fd5fd.chunk.js",
+    "static/js/2.784fd5fd.chunk.js.map": "/trending-movies-react/static/js/2.784fd5fd.chunk.js.map",
+    "index.html": "/trending-movies-react/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/trending-movies-react/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.784fd5fd.chunk.js.LICENSE.txt": "/trending-movies-react/static/js/2.784fd5fd.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/trending-movies-react/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.63d40e2e.js",
+    "static/js/2.784fd5fd.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.993544c1.chunk.js"
+  ]
+}
