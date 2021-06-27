@@ -1,3 +1,34 @@
+# Trending Movies / TV Shows
+### React Coding Challenge
+Please read through this document before you start
+
+
+#### General Requirements
+Use React to build a “Trending Movies and TV Shows” single page app. It should use existing free movie database API from themoviedb.org.
+Route for trending: GET /trending/{media_type}/{time_window}
+Route for TV GET /tv/{tv_id}
+Route for Movie GET /movie/{movie_id}
+The website in general should look like this. It doesn’t have to be pixel perfect. The movies in the list are not fixed, it should display whatever trending movies you get from the movie database API you use.
+Share your private project files with us on git project hosting sites like GitHub. You can use any npm packages
+Ideally, you should not spend more than 5 hours on this project
+Features
+Must have:
+Displaying a list of trending TV shows
+Displaying a list of trending Movies
+For each movie or tv show, display the poster, title, user rating, genres.
+Click on the poster or the title will navigate user to the movie/show’s IMDB page
+Each movie or tv show should have a “Watch Trailer” link that will navigate user to youtube that search for that title’s trailer
+Nice to have:
+Write all components as react functional components and use React Hooks if you know React Hooks API.
+For each tv show, you can add a link to the TV Network that the show is playing. Example: Altered Carbon is playing on Netflix. So the link Playing On: Neflix will nagavite user to https://www.netflix.com/title/80097140
+Responsive css styling for mobile user (you can decide how the UI should look like for mobile user)
+What we are looking for in this coding challenge
+Know how to build a basic React application
+Able to learn tools and APIs quickly from reading documentations
+Know how to write easy to understand and easy to change code
+Able to do clean commits and make meaningful commit messages. (you should make frequent commits that shows how you progress in this project)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

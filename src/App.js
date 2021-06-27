@@ -1,18 +1,18 @@
-import logo from './logo.svg'
-import './App.css'
-
+import React from 'react'
+import TredingMovies from './components/TrendingMovies'
+import TredingTV from './components/TrendingTV'
+import './App.scss'
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a className='App-link' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <div className='header'>
+        <h1>Trending Movies and TV Shows - React Project</h1>
+      </div>
+      <div className='app-container'>
+        <TredingMovies />
+        <div className='divider'></div>
+        <TredingTV />
+      </div>
     </div>
   )
 }

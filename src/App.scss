@@ -1,0 +1,76 @@
+$mint: rgb(86.6%, 95.6%, 95.4%);
+$text: rgb(12, 29, 77);
+$tableHead: rgb(9, 92, 170);
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 70px;
+  color: $tableHead;
+}
+.app-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  color: $text;
+  font-size: 12px;
+}
+
+.divider {
+  width: 5%;
+  min-width: 5%;
+  border-left: 3px solid $mint;
+  border-right: 3px solid $mint;
+  background-color: rgb(251, 252, 235);
+}
+
+.trendingMovies {
+  display: flex;
+  flex-flow: column wrap;
+  margin: auto;
+  margin-top: 1%;
+  height: 100%;
+  min-height: 100%;
+  min-width: 300px;
+  width: 30%;
+  border-top: 3px solid $mint;
+  th {
+    font-size: 32px;
+    color:$tableHead;
+  }
+  @media only screen and (max-width: 768px) {
+    border: 3px solid $mint;
+    margin: 1%;
+  }
+}
+
+.tableRow {
+  display: flex;
+  flex-direction: column wrap;
+  border-bottom: 1px dotted $mint;
+}
+
+/* Small devices (portrait tablets and large phones, 768px and down) */
+@media only screen and (max-width: 768px) {
+  .trendingMovies {
+    padding: 3%;
+  }
+  .divider {
+    display: none;
+  }
+  .header {
+    font-size: 16px;
+    padding: 20px;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .header {
+    margin: 1%;
+    padding: 1%;
+    margin-bottom: 40px;
+  }
+}
