@@ -1,0 +1,23 @@
+.app-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.trendingMovies, .trendingTV {
+  display: flex;
+  flex-flow: column wrap;
+  margin: auto;
+  border: 5px solid rgb(86.6%, 95.6%, 95.4%);
+  border-radius: 10px;
+  height: 100%;
+  min-width: 30%;
+}
+
+.movieRow {
+  display: flex;
+  flex-direction: column wrap;
+  margin: 20px;
+}
